@@ -1,23 +1,51 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 <html>
 <head>
 <title> Shunping Xie </title>
+<!-- Below used for mobile displays -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
 <div class="header">
-    <nav class="header_menu_left">
-        <a href="http://sxie12.github.io/home">HOME</a>
-        <a href="http://sxie12.github.io/about-me">ABOUT ME</a>
-        <a href="http://sxie12.github.io/projects">PROJECTS</a>
-        <!-- <a href="#about-me">ABOUT ME</a> -->
-    </nav>
-    <nav class="header_menu_right">
-        <a href="http://sxie12.github.io/contact">CONTACT</a>
-        <a href="http://sxie12.github.io/old-drafts">OLD DRAFTS</a>
-        <a href="http://sxie12.github.io/credits">CREDITS</a>
-    </nav>
+    <table class="desktop_header_table">
+        <tr>
+            <td valign="middle" style="width:380px"> 
+                <nav class="header_menu_left">
+                    <a href="http://sxie12.github.io/home">Home</a>
+                    <a href="http://sxie12.github.io/about-me">About Me</a>
+                    <a style="color:#000080" href="http://sxie12.github.io/projects">Projects</a>
+                    <!-- <a href="#about-me">ABOUT ME</a> -->
+                </nav>
+            </td>
+            <td>
+                <h1> LOGO </h1>
+            </td>
+            <td valign="middle" style="width:380px">
+                <nav class="header_menu_right">
+                    <a href="http://sxie12.github.io/contact">Contact</a>
+                    <a href="http://sxie12.github.io/old-drafts">Old Drafts</a>
+                    <a href="http://sxie12.github.io/credits">Credits</a>
+                </nav>
+            </td>
+        </tr>
+    </table>
+    <div class="mobile_header_table">
+        <h1> LOGO </h1>
+        <div class="mobile_header_button">
+            <button class="mobile_header_button_style">≡</button>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <!-- Change below with show/hide? -->
+    <div class="content_body">
+        <h1> ABOUT ME </h1>
+        <div class="content_body_text">
+            <p> Include pictures below or as the background </p>
+        </div>
+    </div>
 </div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="script.js"></script>

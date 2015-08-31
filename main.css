@@ -1,11 +1,211 @@
+/* About me */
+
+/**********************************************************
+ *********************** COMPONENTS ***********************
+ **********************************************************/
+
 body {
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: #f9f9f9;
     margin: 0px;
+    min-width: 320px;
 }
 
+/**********************************************************
+ ************************ HEADER **************************
+ **********************************************************/
+
 .header {
-    height: 60px;
+    min-height: 62px;
+    height: 62px;
+    max-height: 62px;
     width: 100%;
-    background-color: #404040;
+    display: inline;
+    background-color: #0099CC;
 }
+
+.desktop_header_table, .desktop_header_table tr, .desktop_header_table td {
+    padding: 0;
+}
+
+.desktop_header_table {
+    width: 100%;
+    background-color: #0099CC;
+    height: 62px;
+}
+
+.mobile_header_table {
+    display: none;
+}
+
+.header a {
+    color: #fff;
+    font-size: 1em;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.header a:link, .header a:visited, .header a:hover, .header a:active {
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: #0000CC;
+}
+
+/* Currently not in use */
+.header a:active {
+    color: #000080;
+}
+
+.header h1 {
+    margin: 0px;
+    text-align: center;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+.header_menu_left {
+    /* not needed */
+    text-align: left;
+}
+
+.header_menu_right {
+    text-align: right;
+}
+
+.mobile_header_table h1 {
+    padding-left: 15px;
+    text-align: left;
+}
+
+.mobile_header_button {
+    right: 10px;
+    top: 9px;
+    position: absolute;
+}
+
+.mobile_header_button_style {
+    height: 40px;
+    width: 40px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 2.2em;
+    padding: 0;
+    line-height: 0;
+    font-family: Arial;
+}
+
+.mobile_header_button_style:hover {
+    color: #0000CC;
+    border-color: #0000CC;
+}
+
+.mobile_header_button_style:active {
+    color: #000080;
+    border-color: #000080;
+}
+
+/**********************************************************
+ *********************** CONTENT **************************
+ **********************************************************/
+
+.content {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.content_body {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #f8f8f8;
+    width: 1360px;
+    margin: auto;
+    display: inline-block;
+    text-align: left;
+    background-color: #fff;
+}
+
+.content_body_text {
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 50px;
+}
+
+.content_body h1 {
+    text-align: center;
+    color: #000060;
+}
+
+/**********************************************************
+ ********************* MEDIA QUERIES **********************
+ **********************************************************/
+
+@media (max-width: 1400px) {
+    .content_body {
+        width: 980px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content_body {
+        width: 740px;
+    }
+    .desktop_header_table {
+        display: none;
+    }
+    .mobile_header_table {
+        display: inline-block;
+        width: 100%;
+        background-color: #0099CC;
+        height: 62px;
+    }
+    .content_body_text {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content_body {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+}
+
+@media (max-width: 640px) {
+    .content_body {
+        width: 93%;
+        margin-left: 3.5%;
+        margin-right: 3.5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .content_body {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 360px) {
+    .content_body {
+        width: 86%;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+}
+
+/**********************************************************
+ ************************ OTHER ***************************
+ **********************************************************/
+/* Include this in the first line to import Open Sans 
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+ */
