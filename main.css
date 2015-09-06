@@ -1,4 +1,4 @@
-/* About me */
+/* Projects */
 
 /**********************************************************
  *********************** COMPONENTS ***********************
@@ -12,7 +12,7 @@ body {
 }
 
 /**********************************************************
- ************************ HEADER **************************
+ ******************** DESKTOP HEADER **********************
  **********************************************************/
 
 .header {
@@ -22,6 +22,8 @@ body {
     width: 100%;
     display: inline;
     background-color: #0099CC;
+    overflow: hidden;
+    opacity: 1;
 }
 
 .desktop_header_table, .desktop_header_table tr, .desktop_header_table td {
@@ -30,8 +32,11 @@ body {
 
 .desktop_header_table {
     width: 100%;
-    background-color: #0099CC;
+    background-color: #09C;
     height: 62px;
+    position: fixed;
+    top: 0;
+    opacity: 1;
 }
 
 .mobile_header_table {
@@ -39,10 +44,13 @@ body {
 }
 
 .header a {
-    color: #fff;
+    color: #FFF;
     font-size: 1em;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 84px;
+    text-align: center;
+    outline: none;
 }
 
 .header a:link, .header a:visited, .header a:hover, .header a:active {
@@ -50,7 +58,7 @@ body {
 }
 
 .header a:hover {
-    color: #0000CC;
+    color: #00C;
 }
 
 /* Currently not in use */
@@ -59,21 +67,31 @@ body {
 }
 
 .header h1 {
-    margin: 0px;
+    margin: 0;
     text-align: center;
-    color: #fff;
+    color: #FFF;
     padding-top: 10px;
     padding-bottom: 8px;
 }
 
-.header_menu_left {
-    /* not needed */
-    text-align: left;
+.header_menu_left, .header_menu_right {
+    padding: 0px;
+    list-style-type: none;
+    height: 58px; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+    line-height: 3.8;
 }
 
-.header_menu_right {
-    text-align: right;
+.header_menu_left li, .header_menu_right li, .header_menu_left li a, .header_menu_right li a {
+    display: inline-block;
+    height: 62px;
 }
+
+/**********************************************************
+ ******************** MOBILE HEADER ***********************
+ **********************************************************/
 
 .mobile_header_table h1 {
     padding-left: 15px;
@@ -89,10 +107,10 @@ body {
 .mobile_header_button_style {
     height: 40px;
     width: 40px;
-    border: 2px solid #fff;
+    border: 2px solid #FFF;
     border-radius: 5px;
     background-color: transparent;
-    color: #fff;
+    color: #FFF;
     font-size: 2.2em;
     padding: 0;
     line-height: 0;
@@ -100,8 +118,8 @@ body {
 }
 
 .mobile_header_button_style:hover {
-    color: #0000CC;
-    border-color: #0000CC;
+    color: #00C;
+    border-color: #00C;
 }
 
 .mobile_header_button_style:active {
@@ -110,9 +128,47 @@ body {
 }
 
 /**********************************************************
- *********************** CONTENT **************************
+ ********************** DROP DOWN *************************
  **********************************************************/
 
+.drop_down_contents {
+    display: none;
+    position: absolute;
+    top: 62px;
+    left: 121px;
+    width: 114px;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    line-height: 1;
+}
+
+.drop_down_contents li {
+    height: 36px;
+}
+
+.drop_down_contents li a {
+    background-color: #000080;
+    color: #0FF;
+    text-align: center;
+    padding: 0;
+    width: 114px;
+    height: 36px;
+    line-height: 2;
+}
+
+.drop_down:hover .drop_down_contents {
+    display: block;
+    z-index: 100;
+}
+
+.drop_down_contents li a:hover {
+    color: #FFF;
+}
+
+/**********************************************************
+ *********************** CONTENT **************************
+ **********************************************************/
 .content {
     display: inline-block;
     width: 100%;
@@ -122,23 +178,50 @@ body {
 .content_body {
     border-top-width: 1px;
     border-top-style: solid;
-    border-top-color: #f8f8f8;
+    border-top-color: #F8F8F8;
     width: 1360px;
     margin: auto;
     display: inline-block;
     text-align: left;
-    background-color: #fff;
-}
-
-.content_body_text {
-    padding-left: 20px;
-    padding-right: 10px;
-    padding-top: 50px;
+    background-color: #FFF;
 }
 
 .content_body h1 {
     text-align: center;
     color: #000060;
+    margin-top: 92px;
+    margin-bottom: 90px;
+}
+
+.content_body_text {
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+.content_body_text h2 {
+    color: #00C;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.content_body_text h3 {
+    color: #0F4BFF;
+    margin-bottom: 10px;
+}
+
+.content_body_text p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Verdana;
+    font-size: 1.05em;
+    line-height: 1.5em;
+}
+
+.anchor {
+    display: block;
+    height: 62px;
+    margin-top: -62px;
+    visibility: hidden;
 }
 
 /**********************************************************
@@ -164,10 +247,13 @@ body {
         background-color: #0099CC;
         height: 62px;
     }
+    .content_body h1 {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
     .content_body_text {
         padding-left: 10px;
         padding-right: 10px;
-        padding-top: 10px;
     }
 }
 

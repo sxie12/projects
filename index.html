@@ -8,26 +8,31 @@
 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+<!-- Use Lorem ipsum to generate text for testing -->
 <div class="header">
     <table class="desktop_header_table">
         <tr>
-            <td valign="middle" style="width:380px"> 
-                <nav class="header_menu_left">
-                    <a href="http://sxie12.github.io/home">Home</a>
-                    <a href="http://sxie12.github.io/about-me">About Me</a>
-                    <a style="color:#000080" href="http://sxie12.github.io/projects">Projects</a>
-                    <!-- <a href="#about-me">ABOUT ME</a> -->
-                </nav>
+            <td valign="middle" style="width:352px"> 
+                <ul class="header_menu_left">
+                    <li><a href="http://sxie12.github.io/home">Home</a></li>
+                    <li><a href="http://sxie12.github.io/about-me">About Me</a></li>
+                    <li class="drop_down"><a style="color:#000080" href="http://sxie12.github.io/projects">Projects</a>
+<ul class="drop_down_contents">
+                        <li><a href="#web_template">Web</a></li>
+                        <li><a href="#android_game">Android</a></li>
+                    </ul>
+</li>
+                </ul>
             </td>
             <td>
                 <h1> LOGO </h1>
             </td>
-            <td valign="middle" style="width:380px">
-                <nav class="header_menu_right">
-                    <a href="http://sxie12.github.io/contact">Contact</a>
-                    <a href="http://sxie12.github.io/old-drafts">Old Drafts</a>
-                    <a href="http://sxie12.github.io/credits">Credits</a>
-                </nav>
+            <td valign="middle" style="width:352px">
+                <ul class="header_menu_right">
+                    <li><a href="http://sxie12.github.io/contact">Contact</a></li>
+                    <li><a href="http://sxie12.github.io/old-drafts">Old Drafts</a></li>
+                    <li><a href="http://sxie12.github.io/credits">Credits</a></li>
+                </ul>
             </td>
         </tr>
     </table>
@@ -44,9 +49,13 @@
         <h1> CURRENT PROJECTS </h1>
         <div class="content_body_text">
             <p> Include detailed descriptions of my current projects </p>
-            <h3> Website template </h3>
+<span class="anchor" id="web_template"></span>
+                <div id="web_template_div">
+                    <h2> Website Template </h2>
             <p> Include details about web template </p>
-            <h3> Android game </h3>
+<span class="anchor" id="android_game"></span>
+                <div id="android_game_div">
+                    <h2> Android Game </h2>
             <p> Same as above </p>
         </div>
     </div>
